@@ -1,14 +1,13 @@
 const express = require("express");
-const cors = require("cors");
-
+const app = express();
 const { sendHtmlToClient } = require("./mailer");
 const { sendTemp1 } = require("./html1");
-
-const app = express();
+const cors = require("cors");
 app.use(express.json());
+app.use(cors());
 const PORT = process.env["PORT"] || 11000;
 console.log("working");
-app.use(cors());
+
 app.post("/contact", async (req, res) => {
   console.log(req.body);
   const mail = sendTemp1(req.body);

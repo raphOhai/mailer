@@ -17,8 +17,8 @@ app.post("/contact", async (req, res) => {
 //   console.log(req.body);
 });
 
-app.get("/", async (req, res) => {
-  res.json("yooo");
+app.get("/", (req, res) => {
+  res.json("connected");
 });
 
 app.listen(PORT, () => {

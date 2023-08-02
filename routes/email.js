@@ -10,9 +10,9 @@ router.post("/contact", async (req, res) => {
   sendHtmlToClient("sameleno6@gmail.com", "from h-Corp contact form", mail, res);
 });
 
-router.get("/", (req, res) => {
-  res.json("connected");
-});
+// router.get("/", (req, res) => {
+//   res.json("connected");
+// });
 
 
 module.exports = router;
